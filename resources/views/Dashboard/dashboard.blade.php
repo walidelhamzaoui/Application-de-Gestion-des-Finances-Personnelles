@@ -26,7 +26,7 @@
     <!-- Dashboard -->
     <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
         <!-- Vertical Navbar -->
-        <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg"
+        <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light border-bottom border-bottom-lg-0 border-end-lg"
             id="navbarVertical">
             <div class="container-fluid ">
                 <!-- Toggler -->
@@ -41,7 +41,7 @@
                 <a class="navbar-brand py-lg-1 mb-lg-0 text-center me-0 mt-3 " href="#">
                     <!-- <h3 class="text-info text-center"><img src="{{asset('images/Artboard 9 copy 5LOGO CPADAI.png')}}"
                             style="width:170px;height:fit-content"></h3> -->
-                    <h3 class="fs-4">Management</h3>
+                    <h3 class="fs-4 text-white">Management</h3>
 
                 </a>
                 <hr>
@@ -78,20 +78,20 @@
 
                         <li class="nav-item">
                             <a class="{{ $defaultClass }} {{ $dashboard ? 'active' : '' }}"
-                                href="{{ route('dashboard') }}">
-                                <i class="bi bi-house" style="font-size:20px"></i> Dashboard
+                                href="{{ route('dashboard') }}" >
+                                <i class="bi bi-house text-white" style="font-size:20px"></i> Dashboard
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="{{ $defaultClass }} {{ Request::is('budget') ? 'active' : '' }}"
                                 href="{{ route('budget.index') }}">
-                                <i class="bi bi-coin" style="font-size:20px"></i> Budget
+                                <i class="bi bi-coin text-white" style="font-size:20px"></i> Budget
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="{{ $defaultClass }} {{ Request::is('transaction') ? 'active' : '' }}"
                                 href="{{ route('transaction.index') }}">
-                                <i class="bi bi-cash-coin" style="font-size:20px"></i> Transaction
+                                <i class="bi bi-cash-coin text-white" style="font-size:20px"></i> Transaction
                             </a>
                         </li>
 
@@ -114,11 +114,11 @@
 
 
 
-                        <li class="nav-item m-lg-0 mx-5 d-lg-none d-block ">
+                        <li class="nav-item m-lg-0 mx-5 d-lg-none d-block  ">
 
                             @auth
                             <button
-                                class="inline-flex items-center rounded-circle py-2 border border-transparent text-sm leading-4 font-medium text-white-500 hover:text-white-700 focus:outline-none transition ease-in-out duration-150"
+                                class="inline-flex items-center rounded-circle py-2  border border-transparent text-sm leading-4 font-medium text-white-500 hover:text-white-700 focus:outline-none transition ease-in-out duration-150"
                                 style="width: 53px; height: 53px; background-color: #6c757d; border: none">
                                 <div
                                     style="width: 40px; overflow: hidden; color: white; display: flex; justify-content: center; align-items: center">
@@ -131,29 +131,31 @@
 
                         </li>
 
-                </div>
-                </ul>
 
+                    </ul>
+
+                </div>
             </div>
         </nav>
         <!-- Main content -->
         <div class="h-screen flex-grow-1 overflow-y-lg-auto">
-            <header class="bg-surface-primary border-bottom pt-6  ">
-                <div class="container-fluid " style="margin-bottom:7px">
+            <header class="bg-surface-primary border-bottom pt-6 "style=" background-color: #155e75 !important;">
+            <div class="container-fluid" style="margin-bottom: 7px;">
+
                     <div class="mb-npx ">
                         <div class="row align-items-center">
                             <div class="col-sm-6 col-12 mb-4 mb-sm-0  ">
                                 <!-- Title -->
-                                <h3 class="fs-4 mb-0 ls-tight mt-1 pb-4 fs-1 text-dark">
+                                <h3 class="fs-4 mb-0 ls-tight mt-1 pb-4 fs-1 text-white">
                                     Application de Gestion des Finances Personnelles
                                 </h3>
                             </div>
                             <!-- Actions -->
                             <div class="col-sm-6 col-12 d-none d-lg-block  text-sm-end">
-                                <div class="mx-n1">
+                                <div class="mx-n1 pb-5">
                                     @auth
                                     <button
-                                        class="inline-flex items-center rounded-circle py-2 border border-transparent text-sm leading-4 font-medium text-white-500 hover:text-white-700 focus:outline-none transition ease-in-out duration-150"
+                                        class="inline-flex items-center rounded-circle py-2   border border-transparent text-sm leading-4 font-medium text-white-500 hover:text-white-700 focus:outline-none transition ease-in-out duration-150"
                                         style="width: 53px; height: 53px; background-color: #6c757d; border: none">
                                         <div
                                             style="width: 40px; overflow: hidden; color: white; display: flex; justify-content: center; align-items: center">

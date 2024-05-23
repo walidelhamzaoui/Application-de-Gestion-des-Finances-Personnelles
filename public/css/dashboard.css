@@ -136,6 +136,26 @@
     font-size: 16px; /* Taille de la police */
 
 }
+.navbar{
+    background-color: #155e75 !important; color:white !important
+}
+.nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;color: white !important;
+    border-radius:20px !important;margin:5px;border:none
+}
+
+.nav-link:hover {
+    background-color: #083344 !important;
+    color: white !important;color: white !important;
+}
+
+.active {
+    background-color: #06b6d4 !important; color: white !important;
+    transition: background-color 0.3s ease;
+}
+
+
+
 
 
 

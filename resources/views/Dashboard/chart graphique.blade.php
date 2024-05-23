@@ -120,9 +120,9 @@
 
         </div>
     </div>
-    <div class=" col-12">
-    <div class="daily-expenses card">
-        <div class="card-body text-center"> <!-- Ajout de la classe text-center pour centrer le contenu -->
+    <div class=" col-12 d-flex justify-content-center ">
+    <div class="daily-expenses card  col-10 ">
+        <div class="card-body text-center "> <!-- Ajout de la classe text-center pour centrer le contenu -->
             <h2 class="card-title">Dépenses par jour</h2>
             <canvas id="expenseChart"></canvas>
         </div>
@@ -130,35 +130,37 @@
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    var ctx = document.getElementById('expenseChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: [
-                @foreach($dailyExpenses as $expense)
-                '{{ $expense->day }}',
-                @endforeach
-            ],
-            datasets: [{
-                label: 'Montant total',
-                data: [
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var ctx = document.getElementById('expenseChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
                     @foreach($dailyExpenses as $expense)
-                    {{ $expense->total_amount }},
+                        '{{ $expense->day }}',
                     @endforeach
                 ],
-                backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 5
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+                datasets: [{
+                    label: 'Montant total',
+                    data: [
+                        @foreach($dailyExpenses as $expense)
+                            {{ $expense->total_amount }},
+                        @endforeach
+                    ],
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
                 }
             }
-        }
+        });
     });
 </script>
 
@@ -183,7 +185,7 @@
 
             <div class="form-group col-lg-3 col-md-6 col-9 mb-3  position-relative">
                 <form action="{{ route('dashboard') }}" method="GET">
-                    <input type="text" name="search" id="search" class="form-control" placeholder="Search"
+                    <input type="text" name="search" id="search" class="form-control border-right-0" placeholder="Search"
                         value="{{ old('search') }}" />
                     <button type="submit" class="bi bi-search position-absolute me-0 btn-primary btn  border-0"
                         style="top: 50%; transform: translateY(-50%); right: 0;"></button>

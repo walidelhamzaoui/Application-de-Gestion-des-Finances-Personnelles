@@ -19,7 +19,7 @@
 
         <div class="form-group col-lg-3 col-md-6 col-9 mb-3  position-relative">
                 <form action="{{ route('transaction.index') }}" method="GET">
-                    <input type="text" name="search" id="search" class="form-control" placeholder="Search"
+                    <input type="text" name="search" id="search" class="form-control border-1 border-right-0" placeholder="Search"
                         value="{{ old('search') }}" />
                     <button type="submit" class="bi bi-search position-absolute me-0 btn-primary btn  border-0"
                         style="top: 50%; transform: translateY(-50%); right: 0;"></button>
