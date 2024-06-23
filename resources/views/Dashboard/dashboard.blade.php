@@ -24,13 +24,13 @@
 <body>
 
     <!-- Dashboard -->
-    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary ">
         <!-- Vertical Navbar -->
-        <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light border-bottom border-bottom-lg-0 border-end-lg"
+        <nav class="navbar show navbar-vertical w-60 h-lg-screen navbar-expand-lg px-0 py-3 navbar-light border-bottom border-bottom-lg-0 border-end-lg"
             id="navbarVertical">
             <div class="container-fluid ">
                 <!-- Toggler -->
-                <button class="navbar-toggler bg-white collapsed" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler  bg-white collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="toggler-icon top-bar"></span>
@@ -41,7 +41,7 @@
                 <a class="navbar-brand py-lg-1 mb-lg-0 text-center me-0 mt-3 " href="#">
                     <!-- <h3 class="text-info text-center"><img src="{{asset('images/Artboard 9 copy 5LOGO CPADAI.png')}}"
                             style="width:170px;height:fit-content"></h3> -->
-                    <h3 class="fs-4 text-white">Management</h3>
+                    <h3 class="fs-4 text-black">Management</h3>
 
                 </a>
                 <hr>
@@ -79,19 +79,19 @@
                         <li class="nav-item">
                             <a class="{{ $defaultClass }} {{ $dashboard ? 'active' : '' }}"
                                 href="{{ route('dashboard') }}" >
-                                <i class="bi bi-house text-white" style="font-size:20px"></i> Dashboard
+                                <i class="bi bi-house text-black" style="font-size:20px"></i> Dashboard
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="{{ $defaultClass }} {{ Request::is('budget') ? 'active' : '' }}"
                                 href="{{ route('budget.index') }}">
-                                <i class="bi bi-coin text-white" style="font-size:20px"></i> Budget
+                                <i class="bi bi-coin text-black" style="font-size:20px"></i> Budget
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="{{ $defaultClass }} {{ Request::is('transaction') ? 'active' : '' }}"
                                 href="{{ route('transaction.index') }}">
-                                <i class="bi bi-cash-coin text-white" style="font-size:20px"></i> Transaction
+                                <i class="bi bi-cash-coin text-black" style="font-size:20px"></i> Transaction
                             </a>
                         </li>
 
@@ -138,15 +138,15 @@
             </div>
         </nav>
         <!-- Main content -->
-        <div class="h-screen flex-grow-1 overflow-y-lg-auto">
-            <header class="bg-surface-primary border-bottom pt-6 "style=" background-color: #155e75 !important;">
+        <div class="h-screen flex-grow-1 overflow-y-lg-auto m-0">
+            <header class="bg-surface-primary border-bottom pt-6 ">
             <div class="container-fluid" style="margin-bottom: 7px;">
 
                     <div class="mb-npx ">
                         <div class="row align-items-center">
-                            <div class="col-sm-6 col-12 mb-4 mb-sm-0  ">
+                            <div class="col-sm-6 col-12 mb-4 mb-sm-0 ">
                                 <!-- Title -->
-                                <h3 class="fs-4 mb-0 ls-tight mt-1 pb-4 fs-1 text-white">
+                                <h3 class="fs-4 mb-0 ls-tight mt-1 pb-4 fs-1 ">
                                     Application de Gestion des Finances Personnelles
                                 </h3>
                             </div>

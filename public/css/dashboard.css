@@ -119,7 +119,7 @@
     border-color: #dee2e6;
 }
 .lougout{
- background-color:rgba(255, 0, 0, 0.685); color:white !important
+ background-color:rgba(255, 0, 0, 0.685); color:white!important
 }
 .lougout button{
     background-color:transparent;color: white !important;
@@ -137,16 +137,16 @@
 
 }
 .navbar{
-    background-color: #155e75 !important; color:white !important
+    color:white !important
 }
 .nav-link {
-    transition: background-color 0.3s ease, color 0.3s ease;color: white !important;
+    transition: background-color 0.3s ease, color 0.3s ease;color: rgb(18, 16, 16) !important;
     border-radius:20px !important;margin:5px;border:none
 }
 
 .nav-link:hover {
-    background-color: #083344 !important;
-    color: white !important;color: white !important;
+    background-color: rgba(199, 205, 198, 0.642) !important;
+ color: rgb(10, 10, 10) !important;
 }
 
 .active {
